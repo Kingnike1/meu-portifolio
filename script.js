@@ -26,7 +26,7 @@ const projetos = [
     nome: "Projeto 1 - Loja Virtual da Nike",
     descricao: "Este projeto é uma simulação de uma loja virtual da Nike, criada para demonstrar como montar um site de e-commerce funcional. A loja apresenta uma interface simples e intuitiva para navegação, com categorias de produtos, uma página de detalhes e uma experiência de checkout.",
     imagem: "Screenshot 2024-12-04 at 21-19-41 Nike Air Jordan.png",
-    link: "#"
+    link: "https://kingnike1.github.io/card/index.html"
   },
   {
     nome: "Projeto 2 - Gerador de Senha",
