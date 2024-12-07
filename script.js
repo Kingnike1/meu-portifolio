@@ -53,7 +53,7 @@ function gerarProjetos() {
         <img src="${projeto.imagem}" alt="${projeto.nome}">
         <h3>${projeto.nome}</h3>
         <p>${projeto.descricao}</p>
-        <a href="${projeto.link}">Ver mais</a>
+        <a href="${projeto.link}" target="_blank">Ver mais</a>
       `;
 
     projectList.appendChild(projectDiv);
