@@ -22,42 +22,55 @@ const projetos = [
   }
 ];
 
-  
-  // Função para gerar os projetos dinamicamente
-  function gerarProjetos() {
-    const projectList = document.querySelector('.project-list');
-    projetos.forEach(projeto => {
-      const projectDiv = document.createElement('div');
-      projectDiv.classList.add('project');
-      
-      projectDiv.innerHTML = `
+// Função para gerar os projetos dinamicamente
+function gerarProjetos() {
+  const projectList = document.querySelector('.project-list');
+  projetos.forEach(projeto => {
+    const projectDiv = document.createElement('div');
+    projectDiv.classList.add('project', 'fade-in');
+
+    projectDiv.innerHTML = `
         <img src="${projeto.imagem}" alt="${projeto.nome}">
         <h3>${projeto.nome}</h3>
         <p>${projeto.descricao}</p>
         <a href="${projeto.link}">Ver mais</a>
       `;
-      
-      projectList.appendChild(projectDiv);
-    });
-  }
-  
-  // Enviar feedback do formulário
-  document.getElementById('form-contato').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const mensagem = document.getElementById('mensagem').value;
-    
-    if (nome && email && mensagem) {
-      document.getElementById('feedback').textContent = "Mensagem enviada com sucesso!";
-      document.getElementById('feedback').style.color = "green";
-    } else {
-      document.getElementById('feedback').textContent = "Por favor, preencha todos os campos.";
-      document.getElementById('feedback').style.color = "red";
-    }
+
+    projectList.appendChild(projectDiv);
   });
-  
-  // Gerar os projetos ao carregar a página
-  window.onload = gerarProjetos;
-  
+}
+
+// Enviar feedback do formulário
+document.getElementById('form-contato').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const nome = document.getElementById('nome').value;
+  const email = document.getElementById('email').value;
+  const mensagem = document.getElementById('mensagem').value;
+
+  if (nome && email && mensagem) {
+    document.getElementById('feedback').textContent = "Mensagem enviada com sucesso!";
+    document.getElementById('feedback').style.color = "green";
+  } else {
+    document.getElementById('feedback').textContent = "Por favor, preencha todos os campos.";
+    document.getElementById('feedback').style.color = "red";
+  }
+});
+
+// Gerar os projetos ao carregar a página
+window.onload = function() {
+  gerarProjetos();
+
+  // Iniciar animações AOS
+  AOS.init({
+    duration: 1000,  // Duração das animações
+    offset: 200,     // Distância para começar a animação
+  });
+
+  // Aguardar carregamento dos projetos e aplicar animação fade-in
+  setTimeout(() => {
+    document.querySelectorAll('.project').forEach(project => {
+      project.classList.add('visible');
+    });
+  }, 200);
+};
