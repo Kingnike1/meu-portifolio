@@ -2,25 +2,26 @@
 
 // Array de projetos
 const projetos = [
-    {
-      nome: "Projeto 1",
-      descricao: "Descrição do projeto 1",
-      imagem: "https://via.placeholder.com/250",
-      link: "#"
-    },
-    {
-      nome: "Projeto 2",
-      descricao: "Descrição do projeto 2",
-      imagem: "https://via.placeholder.com/250",
-      link: "#"
-    },
-    {
-      nome: "Projeto 3",
-      descricao: "Descrição do projeto 3",
-      imagem: "https://via.placeholder.com/250",
-      link: "#"
-    }
-  ];
+  {
+    nome: "Projeto 1 - Loja Virtual da Nike",
+    descricao: "Este projeto é uma simulação de uma loja virtual da Nike, criada para demonstrar como montar um site de e-commerce funcional. A loja apresenta uma interface simples e intuitiva para navegação, com categorias de produtos, uma página de detalhes e uma experiência de checkout.",
+    imagem: "Screenshot 2024-12-04 at 21-19-41 loja virtual da nike.png",
+    link: "#"
+  },
+  {
+    nome: "Projeto 2 - Gerador de Senha",
+    descricao: "Este gerador de senhas cria senhas fortes e seguras de maneira aleatória. O projeto utiliza JavaScript para gerar combinações únicas e seguras de letras, números e caracteres especiais, garantindo que as senhas sejam robustas e difíceis de adivinhar.",
+    imagem: "gerador de senha.png",
+    link: "#"
+  },
+  {
+    nome: "Projeto 3 - Matrix Effect",
+    descricao: "Este projeto recria o famoso efeito visual do filme 'Matrix', utilizando JavaScript e CSS para gerar a animação de caracteres caindo como chuva verde. É uma demonstração de como manipular o DOM e usar animações em JavaScript para criar efeitos dinâmicos na página.",
+    imagem: "Screenshot 2024-12-06 at 23-14-01 Matrix Effect.png",
+    link: "#"
+  }
+];
+
   
   // Função para gerar os projetos dinamicamente
   function gerarProjetos() {
