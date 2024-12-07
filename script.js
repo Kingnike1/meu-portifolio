@@ -5,7 +5,7 @@ const projetos = [
   {
     nome: "Projeto 1 - Loja Virtual da Nike",
     descricao: "Este projeto é uma simulação de uma loja virtual da Nike, criada para demonstrar como montar um site de e-commerce funcional. A loja apresenta uma interface simples e intuitiva para navegação, com categorias de produtos, uma página de detalhes e uma experiência de checkout.",
-    imagem: "Screenshot 2024-12-04 at 21-19-41 loja virtual da nike.png",
+    imagem: "Screenshot 2024-12-04 at 21-19-41 Nike Air Jordan.png",
     link: "#"
   },
   {
