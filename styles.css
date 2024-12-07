@@ -1,0 +1,234 @@
+/* Fonte e reset básico */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.black-bg {
+  background-color: #111;
+  color: #ddd;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background: linear-gradient(135deg, #222, #444);
+  color: #fff;
+  position: fixed;
+  height: 100vh;
+  transition: width 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.sidebar:hover {
+  width: 250px;
+}
+
+.sidebar-item {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.sidebar-item i {
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.sidebar-item:hover {
+  background: #333;
+  color: #4caf50;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 200px;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar:hover ~ .main-content {
+  margin-left: 250px;
+}
+
+/* Header */
+.header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.header h1.jumbo {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #bbb;
+}
+
+/* Seções */
+.section {
+  padding: 40px 0;
+  text-align: justify;
+}
+
+.section h2{
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.divider {
+  width: 200px;
+  margin: 20px auto;
+  border: none;
+  height: 2px;
+  background-color: #4caf50;
+}
+
+/* Portfólio */
+.portfolio-section {
+  background-color: #1c1c1c;
+}
+
+.row-padding {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.portfolio-item {
+  width: calc(33.333% - 20px);
+  background-color: #222;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.portfolio-img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 4px;
+}
+
+.portfolio-img:hover {
+  transform: scale(1.05);
+}
+
+.text-white {
+  color: #fff;
+  text-decoration: none;
+}
+
+.text-white:hover {
+  color: #4caf50;
+}
+
+/* Serviços */
+.services-section {
+  background-color: #111;
+  color: #ddd;
+}
+
+/* Contato */
+.contact-section {
+  background-color: #333;
+  color: white;
+}
+
+.contact-form .input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #666;
+  border-radius: 4px;
+  background-color: #222;
+  color: #ddd;
+}
+
+.contact-form .input:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.contact-form button {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #45a049;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar:hover {
+    width: 200px;
+  }
+
+  .main-content {
+    margin-left: 60px;
+  }
+
+  .sidebar:hover ~ .main-content {
+    margin-left: 200px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .sidebar-item {
+    padding: 10px 15px;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .row-padding {
+    flex-direction: column;
+  }
+
+  .portfolio-item {
+    width: 100%;
+  }
+}
