@@ -1,5 +1,16 @@
 // scripts.js
 
+// Alternar entre Tema Claro e Escuro
+const toggleThemeButton = document.getElementById('toggle-theme');
+
+toggleThemeButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  const elements = document.querySelectorAll('.section, footer, header');
+  elements.forEach(element => {
+    element.classList.toggle('dark-mode');
+  });
+});
+
 // Array de projetos
 const projetos = [
   {
