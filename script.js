@@ -8,7 +8,7 @@ const toggleIcon = toggleThemeButton.querySelector("i");
 
 toggleThemeButton.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
-  
+
   // Alterar o ícone com base no tema
   if (body.classList.contains("dark-mode")) {
     toggleIcon.classList.remove("fa-moon");
@@ -50,7 +50,7 @@ function gerarProjetos() {
     projectDiv.classList.add('project', 'fade-in');
 
     projectDiv.innerHTML = `
-        <img src="${projeto.imagem}" alt="${projeto.nome}">
+        <img src="${projeto.imagem}" alt="${projeto.nome}" loading="lazy">
         <h3>${projeto.nome}</h3>
         <p>${projeto.descricao}</p>
         <a href="${projeto.link}" target="_blank">Ver mais</a>
@@ -60,7 +60,6 @@ function gerarProjetos() {
   });
 }
 
-// Enviar feedback do formulário
 document.getElementById('form-contato').addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -68,14 +67,21 @@ document.getElementById('form-contato').addEventListener('submit', function (e) 
   const email = document.getElementById('email').value;
   const mensagem = document.getElementById('mensagem').value;
 
+  const feedbackElement = document.getElementById('feedback');
+
   if (nome && email && mensagem) {
-    document.getElementById('feedback').textContent = "Mensagem enviada com sucesso!";
-    document.getElementById('feedback').style.color = "green";
+    setTimeout(() => {
+      feedbackElement.textContent = "Mensagem enviada com sucesso!";
+      feedbackElement.style.color = "green";
+    }, 2000); // Delay de 2 segundos
   } else {
-    document.getElementById('feedback').textContent = "Por favor, preencha todos os campos.";
-    document.getElementById('feedback').style.color = "red";
+    setTimeout(() => {
+      feedbackElement.textContent = "Por favor, preencha todos os campos.";
+      feedbackElement.style.color = "red";
+    }, 2000); // Delay de 2 segundos
   }
 });
+
 
 // Gerar os projetos ao carregar a página
 window.onload = function() {

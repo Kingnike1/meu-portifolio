@@ -1,172 +1,182 @@
-/* Reset de estilos básicos */
+/* RESET DE ESTILOS BÁSICOS */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Inclui bordas e padding nas dimensões totais do elemento */
 }
 
-/* Corpo da página */
+/* CORPO DA PÁGINA */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a fonte do corpo */
+  background-color: #f9f9f9; /* Cor de fundo clara para o modo claro */
+  color: #333; /* Cor do texto */
+  line-height: 1.6; /* Espaçamento entre linhas */
   padding: 0;
   margin: 0;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Para transição do tema */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave ao alternar temas */
 }
 
-/* Tema escuro */
+/* TEMA ESCURO */
 body.dark-mode {
-  background-color: #333;
-  color: #f9f9f9;
+  background-color: #333; /* Cor de fundo escura para o modo escuro */
+  color: #f9f9f9; /* Cor do texto para o modo escuro */
 }
 
-/* Estilo do cabeçalho */
+/* ESTILO DO CABEÇALHO */
 header {
-  background: linear-gradient(135deg, #6e7dff, #5560ea);
-  color: #fff;
+  background: linear-gradient(135deg, #6e7dff, #5560ea); /* Gradiente de fundo */
+  color: #fff; /* Cor do texto */
   padding: 40px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease; /* Transição para o tema escuro */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: background 0.3s ease; /* Transição suave para o tema escuro */
 }
 
 header.dark-mode {
-  background: linear-gradient(135deg, #444, #333);
+  background: linear-gradient(135deg, #444, #333); /* Gradiente mais escuro para o modo escuro */
 }
 
 header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; /* Alinha os itens no cabeçalho em linha */
+  justify-content: space-between; /* Espaço igual entre os itens */
+  align-items: center; /* Alinha os itens verticalmente */
   padding: 0 30px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; /* Centraliza o conteúdo */
 }
 
 header h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-size: 2.4rem; /* Tamanho grande do título */
+  font-weight: 700; /* Peso da fonte para destaque */
+  letter-spacing: 1px; /* Espaçamento entre as letras */
+  text-transform: uppercase; /* Transformação para caixa alta */
 }
 
-/* Navegação */
+/* NAVEGAÇÃO */
 nav ul {
-  list-style: none;
-  display: flex;
+  list-style: none; /* Remove os marcadores da lista */
+  display: flex; /* Alinha os itens em linha */
 }
 
 nav ul li {
-  margin-left: 30px;
+  margin-left: 30px; /* Espaçamento entre os itens */
 }
 
 nav ul li a {
-  position: relative;
-  transition: color 0.3s ease-in-out;
-  text-decoration: none;
-  color: white;
+  position: relative; /* Para utilizar o pseudo-elemento ::after */
+  transition: color 0.3s ease-in-out; /* Transição suave para a cor ao passar o mouse */
+  text-decoration: none; /* Remove o sublinhado */
+  color: white; /* Cor do link */
 }
 
 nav ul li a:hover {
-  color: #ffb74d;
+  color: #ffb74d; /* Cor do link ao passar o mouse */
 }
 
 nav ul li a::after {
   content: '';
-  position: absolute;
+  position: absolute; /* Para posicionar o underline */
   bottom: -5px;
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #ffb74d;
-  transition: width 0.3s ease-in-out;
+  background-color: #ffb74d; /* Cor do underline */
+  transition: width 0.3s ease-in-out; /* Transição do tamanho do underline */
 }
 
 nav ul li a:hover::after {
-  width: 100%;
+  width: 100%; /* Faz o underline ocupar toda a largura do link */
 }
 
-/* Estilo das seções */
+/* ESTILO DAS SEÇÕES */
 .section {
   padding: 60px 30px;
-  text-align: center;
-  transition: background-color 0.3s ease;
+  text-align: center; /* Centraliza o conteúdo */
+  transition: background-color 0.3s ease; /* Transição suave para o fundo */
 }
 
 #sobre {
-  background-color: #fff;
-  border-bottom: 1px solid #f0f0f0;
+  background-color: #fff; /* Cor de fundo do "Sobre" */
+  border-bottom: 1px solid #f0f0f0; /* Linha de separação inferior */
 }
 
 #projetos {
-  background-color: #fafafa;
+  background-color: #fafafa; /* Cor de fundo dos "Projetos" */
 }
 
 #contato {
-  background-color: #fff;
-  border-top: 1px solid #f0f0f0;
+  background-color: #fff; /* Cor de fundo do "Contato" */
+  border-top: 1px solid #f0f0f0; /* Linha de separação superior */
 }
 
 #sobre.dark-mode, #projetos.dark-mode, #contato.dark-mode {
-  background-color: #444;
+  background-color: #444; /* Cor de fundo para o modo escuro */
 }
 
-/* Títulos */
+/* TÍTULOS */
 h2 {
   font-size: 2.4rem;
-  font-weight: 600;
+  font-weight: 600; /* Peso da fonte para destacar */
   color: #333;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  margin-bottom: 30px; /* Espaçamento inferior */
+  text-transform: uppercase; /* Caixa alta */
+  letter-spacing: 1px; /* Espaçamento entre letras */
 }
 
 h3 {
   font-size: 1.8rem;
-  margin: 20px 0;
-  color: #555;
+  margin: 20px 0; /* Espaçamento superior e inferior */
+  color: #555; /* Cor do título secundário */
 }
 
-/* Lista de Projetos */
+/* LISTA DE PROJETOS */
 .project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 30px;
+  display: grid; /* Layout de grid */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Colunas responsivas */
+  gap: 30px; /* Espaçamento entre os itens */
   margin-top: 40px;
 }
 
 .project-list .project {
-  background-color: #fff;
+  background-color: #fff; /* Cor de fundo dos projetos */
   padding: 25px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+  border-radius: 10px; /* Bordas arredondadas */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transições para hover */
 }
 
 .project-list .project:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  filter: brightness(1.1);
+  transform: translateY(-10px); /* Efeito de elevação */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Sombra mais forte ao passar o mouse */
+  filter: brightness(1.1); /* Brilho aumentado ao passar o mouse */
 }
 
 .project img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  animation: glow 2s infinite ease-in-out;
+  width: 100%; /* Faz a imagem ocupar toda a largura do container */
+  height: 200px; /* Altura fixa */
+  object-fit: cover; /* Cobre a área sem deformar a imagem */
+  border-radius: 8px; /* Bordas arredondadas */
+  margin-bottom: 20px; /* Espaçamento inferior */
+  animation: glow 2s infinite ease-in-out; /* Animação de brilho */
 }
 
-/* Animação de brilho para o efeito glow */
+/* ANIMAÇÃO DE BRILHO */
 @keyframes glow {
   0% { filter: brightness(1); }
   50% { filter: brightness(1.5); }
   100% { filter: brightness(1); }
 }
 
-/* Formulário de Contato */
+/* ANIMAÇÃO PARA FADE-IN */
+.project {
+  opacity: 0; /* Inicialmente invisível */
+  transition: opacity 1s ease-in-out; /* Transição para visibilidade */
+}
+
+.project.visible {
+  opacity: 1; /* Tornar visível quando a classe 'visible' for adicionada */
+}
+
+/* FORMULÁRIO DE CONTATO */
 #form-contato input,
 #form-contato textarea {
   width: 100%;
@@ -180,77 +190,79 @@ h3 {
 
 #form-contato input:focus,
 #form-contato textarea:focus {
-  border-color: #6e7dff;
+  border-color: #6e7dff; /* Cor do foco */
 }
 
 #form-contato button {
-  background-color: #6e7dff;
+  background-color: #6e7dff; /* Cor do botão */
   color: #fff;
   padding: 12px 30px;
   border: none;
   border-radius: 8px;
   font-size: 1.1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer; /* Indicador de clique */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
 }
 
 #form-contato button:hover {
-  background-color: #5560ea;
-  transform: translateY(-3px);
+  background-color: #5560ea; /* Cor do botão ao passar o mouse */
+  transform: translateY(-3px); /* Efeito de elevação */
 }
 
-/* Rodapé */
+/* RODAPÉ */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #333;
+  background-color: #333; /* Cor de fundo escura */
   color: #fff;
   font-size: 1rem;
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Sombra no topo */
 }
 
 footer p {
-  font-weight: 500;
+  font-weight: 500; /* Peso da fonte */
 }
 
-/* Estilo do cursor personalizado */
+/* ESTILO DO CURSOR PERSONALIZADO */
 body {
-  cursor: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/cursor.svg'), auto; /* Alterar para SVG ou imagem desejada */
+  cursor: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/cursor.svg'), auto; /* Cursor customizado */
 }
 
 body:hover {
-  cursor: pointer;
+  cursor: pointer; /* Alteração do cursor quando passar por áreas interativas */
 }
 
-/* Botão para alternar tema */
+/* BOTÃO PARA ALTERNAR TEMA */
 #toggle-theme {
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: #6e7dff;
+  background-color: #6e7dff; /* Cor de fundo do botão */
   color: #fff;
   border: none;
   padding: 10px 20px;
-  border-radius: 50%;
-  cursor: pointer;
+  border-radius: 50%; /* Botão redondo */
+  cursor: pointer; /* Indicador de clique */
   font-size: 1.5rem;
-  z-index: 1000;
+  z-index: 1000; /* Para garantir que o botão apareça sobre outros elementos */
   transition: background-color 0.3s ease;
 }
 
 #toggle-theme:hover {
-  background-color: #5560ea;
+  background-color: #5560ea; /* Cor de fundo ao passar o mouse */
 }
 
-/* Responsividade */
+/* RESPONSIVIDADE */
+
+/* Para telas menores que 1024px */
 @media (max-width: 1024px) {
   header .container {
-    flex-direction: column;
+    flex-direction: column; /* Coloca os itens do cabeçalho em coluna */
     align-items: center;
   }
 
   nav ul {
-    flex-direction: column;
+    flex-direction: column; /* Organiza a navegação em coluna */
     margin-top: 20px;
   }
 
@@ -259,45 +271,46 @@ body:hover {
   }
 
   .project-list {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta a grid para telas menores */
   }
 
   .section {
-    padding: 40px 20px;
+    padding: 40px 20px; /* Menos espaço nas seções */
   }
 }
 
+/* Para telas menores que 768px */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Tamanho menor do título */
   }
 
   nav ul li {
-    margin-left: 15px;
+    margin-left: 15px; /* Menor margem nos itens da navegação */
   }
 
   .project-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Exibe os projetos em uma única coluna */
   }
 
   #form-contato input,
   #form-contato textarea {
-    font-size: 1rem;
+    font-size: 1rem; /* Menor fonte para inputs */
   }
 
   #form-contato button {
-    font-size: 1rem;
+    font-size: 1rem; /* Menor fonte no botão */
   }
 }
 
-/* Animação de Fade-In */
+/* ANIMAÇÃO DE FADE-IN */
 .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s, transform 0.6s;
+  opacity: 0; /* Inicialmente invisível */
+  transform: translateY(20px); /* Inicia deslocado para baixo */
+  transition: opacity 0.6s, transform 0.6s; /* Transição suave para visibilidade */
 }
 
 .fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1; /* Torna visível */
+  transform: translateY(0); /* Retorna ao lugar original */
 }
