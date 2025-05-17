@@ -1,4 +1,16 @@
 // scripts.js
+const scrollToTopButton = document.getElementById('scroll-to-top');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        scrollToTopButton.style.display = 'block';
+    } else {
+        scrollToTopButton.style.display = 'none';
+    }
+});
+
+scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 // Alternar entre Tema Claro e Escuro
 // Alternar entre temas claro e escuro
