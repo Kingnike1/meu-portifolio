@@ -22,6 +22,18 @@ body.dark-mode {
   color: #f9f9f9; /* Cor do texto para o modo escuro */
 }
 
+#scroll-to-top {
+  position: relative !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  background-color: #6e7dff !important;
+  color: white !important;
+  padding: 15px !important;
+  border-radius: 50% !important;
+  font-size: 1.5rem !important;
+  display: none !important; /* Inicialmente invisível */
+}
+
 /* ESTILO DO CABEÇALHO */
 header {
   background: linear-gradient(135deg, #6e7dff, #5560ea); /* Gradiente de fundo */
